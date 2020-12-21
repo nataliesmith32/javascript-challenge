@@ -19,10 +19,10 @@ function buildTable(data) {
 function handleClick(){
     d3.event.preventDefault();
 
-    let date = d3.select("#datetime").property("value");
-    let filterData = tableData;
+    var date = d3.select("#datetime").property("value");
+    var filterData = tableData;
 
-    if(date) {
+    if (date) {
         filterData = filterData.filter((row) => row.datetime === date);
     }
     buildTable(filterData);
